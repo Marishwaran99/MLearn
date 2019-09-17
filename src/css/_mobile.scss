@@ -1,0 +1,522 @@
+@include mediaXs {
+  .container {
+    width: 95%;
+  }
+  @each $name, $val in $widthHeights {
+    .xs-w-#{$name} {
+      width: $val;
+    }
+    .xs-h-#{$name} {
+      height: $val;
+    }
+    .xs-w-min-#{$name} {
+      min-width: $val;
+    }
+    .xs-h-min-#{$name} {
+      min-height: $val;
+    }
+    .xs-w-max-#{$name} {
+      max-width: $val;
+    }
+    .xs-h-max-#{$name} {
+      max-height: $val;
+    }
+  }
+  @each $name, $val in $marginPaddingPix {
+    .xs-m-#{$name} {
+      margin: $val;
+    }
+    .xs-mx-#{$name} {
+      margin-left: $val;
+      margin-right: $val;
+    }
+    .xs-my-#{$name} {
+      margin-top: $val;
+      margin-bottom: $val;
+    }
+    .xs-ml-#{$name} {
+      margin-left: $val;
+    }
+    .xs-mr-#{$name} {
+      margin-right: $val;
+    }
+    .xs-mt-#{$name} {
+      margin-top: $val;
+    }
+    .xs-mb-#{$name} {
+      margin-bottom: $val;
+    }
+    .xs-p-#{$name} {
+      padding: $val;
+    }
+    .xs-px-#{$name} {
+      padding-left: $val;
+      padding-right: $val;
+    }
+    .xs-py-#{$name} {
+      padding-top: $val;
+      padding-bottom: $val;
+    }
+    .xs-pl-#{$name} {
+      padding-left: $val;
+    }
+    .xs-pr-#{$name} {
+      padding-right: $val;
+    }
+    .xs-pt-#{$name} {
+      padding-top: $val;
+    }
+    .xs-pb-#{$name} {
+      padding-bottom: $val;
+    }
+  }
+  @each $name, $val in $textDecoration {
+    .xs-text-deco-#{$name} {
+      text-decoration: $val;
+    }
+  }
+  @each $name, $val in $textAlignment {
+    .xs-text-#{$name} {
+      text-align: $val;
+    }
+  }
+  @each $name, $val in $flexDirection {
+    .xs-flex-#{$name} {
+      flex-direction: $val;
+    }
+  }
+  @each $name, $val in $justifyContent {
+    .xs-jc#{$name} {
+      justify-content: $val;
+    }
+  }
+  @each $name, $val in $alignItems {
+    .xs-ai#{$name} {
+      align-items: $val;
+    }
+  }
+  @each $name, $val in $alignSelf {
+    .xs-as#{$name} {
+      align-self: $val;
+    }
+  }
+}
+@include mediaSm {
+  .container {
+    width: 90%;
+  }
+  @each $name, $val in $widthHeights {
+    .sm-w-#{$name} {
+      width: $val;
+    }
+    .sm-h-#{$name} {
+      height: $val;
+    }
+    .sm-w-min-#{$name} {
+      min-width: $val;
+    }
+    .sm-h-min-#{$name} {
+      min-height: $val;
+    }
+    .sm-w-max-#{$name} {
+      max-width: $val;
+    }
+    .h-max-#{$name} {
+      max-height: $val;
+    }
+  }
+  @each $name, $val in $textDecoration {
+    .sm-text-deco-#{$name} {
+      text-decoration: $val;
+    }
+  }
+  @each $name, $val in $textAlignment {
+    .sm-text-#{$name} {
+      text-align: $val;
+    }
+  }
+  @each $name, $val in $marginPaddingPix {
+    .sm-m-#{$name} {
+      margin: $val;
+    }
+    .sm-mx-#{$name} {
+      margin-left: $val;
+      margin-right: $val;
+    }
+    .sm-my-#{$name} {
+      margin-top: $val;
+      margin-bottom: $val;
+    }
+    .sm-ml-#{$name} {
+      margin-left: $val;
+    }
+    .sm-mr-#{$name} {
+      margin-right: $val;
+    }
+    .sm-mt-#{$name} {
+      margin-top: $val;
+    }
+    .sm-mb-#{$name} {
+      margin-bottom: $val;
+    }
+    .sm-p-#{$name} {
+      padding: $val;
+    }
+    .sm-px-#{$name} {
+      padding-left: $val;
+      padding-right: $val;
+    }
+    .sm-py-#{$name} {
+      padding-top: $val;
+      padding-bottom: $val;
+    }
+    .sm-pl-#{$name} {
+      padding-left: $val;
+    }
+    .sm-pr-#{$name} {
+      padding-right: $val;
+    }
+    .sm-pt-#{$name} {
+      padding-top: $val;
+    }
+    .sm-pb-#{$name} {
+      padding-bottom: $val;
+    }
+  }
+  .sm-d-none {
+    display: none;
+  }
+  .sm-d-flex {
+    display: flex;
+  }
+  @each $name, $val in $flexDirection {
+    .sm-flex-#{$name} {
+      flex-direction: $val;
+    }
+  }
+  @each $name, $val in $justifyContent {
+    .sm-jc#{$name} {
+      justify-content: $val;
+    }
+  }
+  @each $name, $val in $alignItems {
+    .sm-ai#{$name} {
+      align-items: $val;
+    }
+  }
+  @each $name, $val in $alignSelf {
+    .sm-as#{$name} {
+      align-self: $val;
+    }
+  }
+}
+@include mediaMd {
+  .container {
+    width: 80%;
+  }
+  @each $name, $val in $widthHeights {
+    .md-w-#{$name} {
+      width: $val;
+    }
+    .md-h-#{$name} {
+      height: $val;
+    }
+    .md-w-min-#{$name} {
+      min-width: $val;
+    }
+    .md-h-min-#{$name} {
+      min-height: $val;
+    }
+    .md-w-max-#{$name} {
+      max-width: $val;
+    }
+    .md-h-max-#{$name} {
+      max-height: $val;
+    }
+  }
+  @each $name, $val in $textDecoration {
+    .md-text-deco-#{$name} {
+      text-decoration: $val;
+    }
+  }
+  @each $name, $val in $textAlignment {
+    .md-text-#{$name} {
+      text-align: $val;
+    }
+  }
+  @each $name, $val in $marginPaddingPix {
+    .md-m-#{$name} {
+      margin: $val;
+    }
+    .md-mx-#{$name} {
+      margin-left: $val;
+      margin-right: $val;
+    }
+    .md-my-#{$name} {
+      margin-top: $val;
+      margin-bottom: $val;
+    }
+    .md-ml-#{$name} {
+      margin-left: $val;
+    }
+    .md-mr-#{$name} {
+      margin-right: $val;
+    }
+    .md-mt-#{$name} {
+      margin-top: $val;
+    }
+    .md-mb-#{$name} {
+      margin-bottom: $val;
+    }
+    .md-p-#{$name} {
+      padding: $val;
+    }
+    .md-px-#{$name} {
+      padding-left: $val;
+      padding-right: $val;
+    }
+    .md-py-#{$name} {
+      padding-top: $val;
+      padding-bottom: $val;
+    }
+    .md-pl-#{$name} {
+      padding-left: $val;
+    }
+    .md-pr-#{$name} {
+      padding-right: $val;
+    }
+    .md-pt-#{$name} {
+      padding-top: $val;
+    }
+    .md-pb-#{$name} {
+      padding-bottom: $val;
+    }
+  }
+  .md-d-none {
+    display: none;
+  }
+  .md-d-flex {
+    display: flex;
+  }
+  @each $name, $val in $flexDirection {
+    .md-flex-#{$name} {
+      flex-direction: $val;
+    }
+  }
+  @each $name, $val in $justifyContent {
+    .md-jc#{$name} {
+      justify-content: $val;
+    }
+  }
+  @each $name, $val in $alignItems {
+    .md-ai#{$name} {
+      align-items: $val;
+    }
+  }
+  @each $name, $val in $alignSelf {
+    .md-as#{$name} {
+      align-self: $val;
+    }
+  }
+}
+@include mediaLg {
+  @each $name, $val in $widthHeights {
+    .lg-w-#{$name} {
+      width: $val;
+    }
+    .lg-h-#{$name} {
+      height: $val;
+    }
+    .lg-w-min-#{$name} {
+      min-width: $val;
+    }
+    .lg-h-min-#{$name} {
+      min-height: $val;
+    }
+    .lg-w-max-#{$name} {
+      max-width: $val;
+    }
+    .lg-h-max-#{$name} {
+      max-height: $val;
+    }
+  }
+  .container {
+    width: 75%;
+  }
+  @each $name, $val in $textDecoration {
+    .lg-text-deco-#{$name} {
+      text-decoration: $val;
+    }
+  }
+  @each $name, $val in $textAlignment {
+    .lg-text-#{$name} {
+      text-align: $val;
+    }
+  }
+  @each $name, $val in $marginPaddingPix {
+    .lg-m-#{$name} {
+      margin: $val;
+    }
+    .lg-mx-#{$name} {
+      margin-left: $val;
+      margin-right: $val;
+    }
+    .lg-my-#{$name} {
+      margin-top: $val;
+      margin-bottom: $val;
+    }
+    .lg-ml-#{$name} {
+      margin-left: $val;
+    }
+    .lg-mr-#{$name} {
+      margin-right: $val;
+    }
+    .lg-mt-#{$name} {
+      margin-top: $val;
+    }
+    .lg-mb-#{$name} {
+      margin-bottom: $val;
+    }
+    .lg-p-#{$name} {
+      padding: $val;
+    }
+    .lg-px-#{$name} {
+      padding-left: $val;
+      padding-right: $val;
+    }
+    .lg-py-#{$name} {
+      padding-top: $val;
+      padding-bottom: $val;
+    }
+    .lg-pl-#{$name} {
+      padding-left: $val;
+    }
+    .lg-pr-#{$name} {
+      padding-right: $val;
+    }
+    .lg-pt-#{$name} {
+      padding-top: $val;
+    }
+    .lg-pb-#{$name} {
+      padding-bottom: $val;
+    }
+  }
+  .lg-d-none {
+    display: none;
+  }
+  .lg-d-flex {
+    display: flex;
+  }
+  @each $name, $val in $flexDirection {
+    .lg-flex-#{$name} {
+      flex-direction: $val;
+    }
+  }
+  @each $name, $val in $justifyContent {
+    .lg-jc#{$name} {
+      justify-content: $val;
+    }
+  }
+  @each $name, $val in $alignItems {
+    .lg-ai#{$name} {
+      align-items: $val;
+    }
+  }
+  @each $name, $val in $alignSelf {
+    .lg-as#{$name} {
+      align-self: $val;
+    }
+  }
+}
+@include mediaXL {
+  html {
+    font-size: 20px;
+  }
+  @each $name, $val in $textDecoration {
+    .xl-text-deco-#{$name} {
+      text-decoration: $val;
+    }
+  }
+  @each $name, $val in $textAlignment {
+    .xl-text-#{$name} {
+      text-align: $val;
+    }
+  }
+  .container {
+    width: 70%;
+  }
+  @each $name, $val in $marginPaddingPix {
+    .xl-m-#{$name} {
+      margin: $val;
+    }
+    .xl-mx-#{$name} {
+      margin-left: $val;
+      margin-right: $val;
+    }
+    .xl-my-#{$name} {
+      margin-top: $val;
+      margin-bottom: $val;
+    }
+    .xl-ml-#{$name} {
+      margin-left: $val;
+    }
+    .xl-mr-#{$name} {
+      margin-right: $val;
+    }
+    .xl-mt-#{$name} {
+      margin-top: $val;
+    }
+    .xl-mb-#{$name} {
+      margin-bottom: $val;
+    }
+    .xl-p-#{$name} {
+      padding: $val;
+    }
+    .xl-px-#{$name} {
+      padding-left: $val;
+      padding-right: $val;
+    }
+    .xl-py-#{$name} {
+      padding-top: $val;
+      padding-bottom: $val;
+    }
+    .xl-pl-#{$name} {
+      padding-left: $val;
+    }
+    .xl-pr-#{$name} {
+      padding-right: $val;
+    }
+    .xl-pt-#{$name} {
+      padding-top: $val;
+    }
+    .xl-pb-#{$name} {
+      padding-bottom: $val;
+    }
+  }
+  .xl-d-none {
+    display: none;
+  }
+  .xl-d-flex {
+    display: flex;
+  }
+  @each $name, $val in $flexDirection {
+    .xl-flex-#{$name} {
+      flex-direction: $val;
+    }
+  }
+  @each $name, $val in $justifyContent {
+    .xl-jc#{$name} {
+      justify-content: $val;
+    }
+  }
+  @each $name, $val in $alignItems {
+    .xl-ai#{$name} {
+      align-items: $val;
+    }
+  }
+  @each $name, $val in $alignSelf {
+    .xl-as#{$name} {
+      align-self: $val;
+    }
+  }
+}

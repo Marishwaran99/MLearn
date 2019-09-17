@@ -1,0 +1,274 @@
+@import "config";
+@import "anims";
+html {
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: $bgColor;
+  color: set-text-color($bgColor);
+}
+
+@each $name, $val in $textDecoration {
+  .text-deco-#{$name} {
+    text-decoration: $val;
+  }
+}
+@each $name, $val in $textAlignment {
+  .text-#{$name} {
+    text-align: $val;
+  }
+}
+.d-none {
+  display: none;
+}
+/*Flex*/
+@each $name, $val in $widthHeights {
+  .w-#{$name} {
+    width: $val;
+  }
+  .h-#{$name} {
+    height: $val;
+  }
+  .w-min-#{$name} {
+    min-width: $val;
+  }
+  .h-min-#{$name} {
+    min-height: $val;
+  }
+  .w-max-#{$name} {
+    max-width: $val;
+  }
+  .h-max-#{$name} {
+    max-height: $val;
+  }
+}
+@each $name, $val in $fullWidths {
+  .w-#{$name} {
+    width: $val;
+  }
+  .w-min-#{$name} {
+    min-width: $val;
+  }
+  .w-max-#{$name} {
+    max-width: $val;
+  }
+}
+@each $name, $val in $fullHeights {
+  .h-#{$name} {
+    height: $val;
+  }
+  .h-min-#{$name} {
+    min-height: $val;
+  }
+  .h-max-#{$name} {
+    max-height: $val;
+  }
+}
+@each $name, $val in $marginPaddingPix {
+  .m-#{$name} {
+    margin: $val;
+  }
+  .mx-#{$name} {
+    margin-left: $val;
+    margin-right: $val;
+  }
+  .my-#{$name} {
+    margin-top: $val;
+    margin-bottom: $val;
+  }
+  .ml-#{$name} {
+    margin-left: $val;
+  }
+  .mr-#{$name} {
+    margin-right: $val;
+  }
+  .mt-#{$name} {
+    margin-top: $val;
+  }
+  .mb-#{$name} {
+    margin-bottom: $val;
+  }
+  .p-#{$name} {
+    padding: $val;
+  }
+  .px-#{$name} {
+    padding-left: $val;
+    padding-right: $val;
+  }
+  .py-#{$name} {
+    padding-top: $val;
+    padding-bottom: $val;
+  }
+  .pl-#{$name} {
+    padding-left: $val;
+  }
+  .pr-#{$name} {
+    padding-right: $val;
+  }
+  .pt-#{$name} {
+    padding-top: $val;
+  }
+  .pb-#{$name} {
+    padding-bottom: $val;
+  }
+}
+@each $name, $val in $cursors {
+  .c-#{$name} {
+    cursor: $val;
+  }
+}
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*buttons*/
+.btn {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  transition: all 0.5s;
+}
+.btn-rnd {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+@each $name, $val in $borderWidths {
+  .b-#{$name} {
+    border: $val solid set-text-color($bgColor);
+  }
+  .br-#{$name} {
+    border-right: $val solid set-text-color($bgColor);
+  }
+  .bl-#{$name} {
+    border-left: $val solid set-text-color($bgColor);
+  }
+  .bt-#{$name} {
+    border-top: $val solid set-text-color($bgColor);
+  }
+  .bb-#{$name} {
+    border-bottom: $val solid set-text-color($bgColor);
+  }
+}
+@each $name, $val in $listStyles {
+  .ls-#{$name} {
+    list-style: $val;
+  }
+}
+.tag {
+  font-size: 12px;
+  background-color: $primary-color;
+  color: white;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  width: fit-content;
+  border-radius: 1rem;
+}
+hr {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.container {
+  width: 70%;
+  margin: auto;
+}
+h1 {
+  font-size: 1rem;
+}
+.d-flex {
+  display: flex;
+}
+@each $name, $val in $flexDirection {
+  .flex-#{$name} {
+    flex-direction: $val;
+  }
+}
+@each $name, $val in $justifyContent {
+  .jc#{$name} {
+    justify-content: $val;
+  }
+}
+@each $name, $val in $alignItems {
+  .ai#{$name} {
+    align-items: $val;
+  }
+}
+@each $name, $val in $alignSelf {
+  .as#{$name} {
+    align-self: $val;
+  }
+}
+@each $name, $val in $borderRadius {
+  .b-rad-#{$name} {
+    border-radius: $val;
+  }
+}
+@each $name, $val in $shadowWidths {
+  .shadow-#{$name} {
+    box-shadow: $val;
+  }
+}
+@each $name, $val in $flexWraps {
+  .flex-#{$name} {
+    flex-wrap: $val;
+  }
+}
+@each $name, $val in $opacity {
+  .opacity-#{$name} {
+    opacity: $val;
+  }
+}
+@each $name, $val in $overflows {
+  .of-#{$name} {
+    overflow: $val;
+  }
+  .of-x-#{$name} {
+    overflow-x: $val;
+  }
+  .of-y-#{$name} {
+    overflow-y: $val;
+  }
+}
+@each $name, $val in $fontWeights {
+  .font-wt-#{$name} {
+    font-weight: $val;
+  }
+}
+@each $name, $values in $colors {
+  .#{$name} {
+    color: set-text-color($values);
+    background-color: $values;
+  }
+  .text-#{$name} {
+    color: $values;
+  }
+  .border-#{$name} {
+    border-color: $values;
+  }
+  .link-#{$name} {
+    color: $values;
+  }
+}
+select {
+  width: -webkit-fill-available;
+  margin: 1rem 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid $primary-color;
+  outline: none;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+@import "mobile";

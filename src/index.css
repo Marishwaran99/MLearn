@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Karla;
+  src: url("./fonts/Karla-Regular.ttf");
+}
+@font-face {
+  font-family: Karla;
+  font-weight: bold;
+  src: url("./fonts/Karla-Bold.ttf");
+}
+@font-face {
+  font-family: Karla;
+  font-style: italic;
+  src: url("./fonts/Karla-RegularItalic.ttf");
+}
+@font-face {
+  font-family: Karla;
+  font-weight: bold;
+  font-style: italic;
+  src: url("./fonts/Karla-BoldItalic.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Karla, "sans-serif";
+}
+.tag {
+  font-size: 14px;
+  background-color: #2980b9;
+  color: white;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  width: fit-content;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+}
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.input-tags li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  font-size: 14px;
+  padding-left: 0.5rem;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 1rem;
+}
+
+.input-tags li button {
+  font-size: 14px;
+  background-color: #2980b9;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  font-weight: bold;
+  width: fit-content;
+  border-radius: 1rem;
+  margin: 0;
+  margin-left: 0.5rem;
+  background-color: none;
+}
+.code-container {
+  height: calc(100vh - 64px - 75px);
+}
+textarea {
+  border-bottom: "none" !important;
+}

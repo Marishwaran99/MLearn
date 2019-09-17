@@ -1,0 +1,177 @@
+$bgColor: #fff;
+$primary-color: #2980b9;
+$secondary-color: rgb(31, 58, 147);
+$accent-color: #ff6347;
+$shadow-color1: "";
+$shadow-color2: "";
+$shadow-color3: "";
+$textAlignment: (
+  "left": left,
+  "center": center,
+  "right": right,
+  "justify": justify
+);
+$textDecoration: (
+  "none": none,
+  "uline": underline,
+  "oline": overline,
+  "unset": unset
+);
+$flexDirection: (
+  "row": row,
+  "col": column,
+  "row-rev": row-reverse,
+  "col-rev": column-reverse
+);
+$justifyContent: (
+  "fs": flex-start,
+  "c": center,
+  "fe": flex-end,
+  "sb": space-between,
+  "se": space-evenly,
+  "sa": space-around
+);
+$alignItems: (
+  "fs": flex-start,
+  "c": center,
+  "fe": flex-end,
+  "sb": space-between,
+  "se": space-evenly,
+  "sa": space-around
+);
+$alignSelf: (
+  "fs": flex-start,
+  "c": center,
+  "fe": flex-end,
+  "b": baseline
+);
+$flexWraps: (
+  "wrap": wrap,
+  "no-wrap": no-wrap,
+  "wrap-rev": wrap-reverse
+);
+$colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "accent": $accent-color,
+  "white": white,
+  "black": black,
+  "gray": snow
+);
+$borderWidths: (
+  "0": 0px,
+  "1": 1px,
+  "2": 2px,
+  "3": 3px,
+  "4": 4px,
+  "5": 5px
+);
+$marginPaddingPix: (
+  "0": 0,
+  "1": 1rem,
+  "2": 2rem,
+  "3": 3rem,
+  "4": 4rem,
+  "sm": 0.5rem,
+  "lg": 5rem,
+  "auto": auto
+);
+$borderRadius: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 1.25rem,
+  "6": 1.5rem,
+  "rnd": 50%
+);
+$hrWidth: (
+  "100": 100%,
+  "75": 75%,
+  "50": 50%,
+  "25": 25%
+);
+$widthHeights: (
+  "100": 100%,
+  "50": 50%,
+  "75": 75%,
+  "25": 25%,
+  "60": 60%,
+  "80": 80%
+);
+$fullWidths: (
+  "full": 100vw,
+  "half": 50vw
+);
+$fullHeights: (
+  "full": 100vh,
+  "full-64": calc(100vh - 64px)
+);
+$cursors: (
+  "pointer": pointer
+);
+$listStyles: (
+  "none": none,
+  "circle": circle,
+  "square": square,
+  "uroman": upper-roman,
+  "lalpha": lower-alpha
+);
+$shadowWidths: (
+  "none": none,
+  "sm": 0 0.25rem 0.5rem rgba(0, 0, 0, 0.125),
+  "md": 0 0.5rem 0.75rem rgba(0, 0, 0, 0.15),
+  "lg": 0 0.75rem 1rem rgba(0, 0, 0, 0.175)
+);
+$fontWeights: (
+  "normal": 400,
+  "bold": 700
+);
+$overflows: (
+  "hidden": hidden,
+  "scroll": scroll,
+  "auto": auto,
+  "visible": visible
+);
+$opacity: (
+  "sm": 0.75,
+  "md": 0.5,
+  "lg": 0.25,
+  "full": 0,
+  "none": 1
+);
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+@mixin mediaXL {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+@mixin mediaSm {
+  @media screen and (min-width: 575px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+@mixin mediaXs {
+  @media screen and (max-width: 575.98px) {
+    @content;
+  }
+}

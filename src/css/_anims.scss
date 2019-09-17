@@ -1,0 +1,151 @@
+$childs: 3;
+
+@for $i from 0 through $childs {
+  .fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    &:nth-child(#{$i}) {
+      animation-delay: ($i * (1/18)) + s;
+    }
+  }
+  .slide-in {
+    transform: translate(-100vw, 0);
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    &:nth-child(#{$i}) {
+      animation-delay: ($i * (1/18)) + s;
+    }
+  }
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-100vw, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.box-loader {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transform: rotate(45deg);
+  animation: boxLoader 2s infinite;
+  span {
+    width: 50px;
+    height: 50px;
+    animation: boxRotate 1s infinite;
+    &:nth-child(1) {
+      background: $secondary-color;
+    }
+    &:nth-child(2) {
+      background: $accent-color;
+    }
+    &:nth-child(3) {
+      background: $accent-color;
+    }
+    &:nth-child(4) {
+      background: $secondary-color;
+    }
+  }
+}
+@keyframes boxLoader {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  25% {
+    width: 150px;
+    height: 150px;
+  }
+  50% {
+    width: 100px;
+    height: 100px;
+  }
+  75% {
+    width: 150px;
+    height: 150px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+@keyframes boxRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.circle-loader {
+  width: 132px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  @for $i from 1 through 4 {
+    span {
+      width: 25px;
+      margin: 4px;
+      height: 25px;
+      border-radius: 50%;
+      background: $primary-color;
+
+      &:nth-child(#{$i}) {
+        animation-name: circleLoader;
+        animation-duration: $i + s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: ($i) + s;
+      }
+    }
+  }
+}
+
+@keyframes circleLoader {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translate(1);
+  }
+}
+@each $name, $val in $colors {
+  .btn {
+    &.#{$name} {
+      &:hover {
+        background: darken($color: $val, $amount: 12);
+        color: set-text-color(darken($color: $val, $amount: 12));
+      }
+    }
+  }
+  .link-black {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
