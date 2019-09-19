@@ -37,6 +37,11 @@ class CodeEditor extends Component {
     if (w >= 768) {
       this.setState({ orientation: false });
     }
+    if (this.props.location.state)
+      this.setState({
+        code: this.props.location.state.content
+      });
+    this.runProgram();
   }
 
   handleChange = e => {
@@ -94,8 +99,8 @@ class CodeEditor extends Component {
         );
     }
     return (
-      <div className="w-100 h-max-full-64">
-        <div className="w-100 d-flex flex-row aic px-1 py-sm">
+      <div className="w-100 h-max-full-64 of-hidden">
+        <div className="w-100 w-max-full of-x-auto d-flex flex-row aic px-1 py-sm ">
           <p
             className="h-100 p-sm text-primary c-pointer asb"
             onClick={this.runProgram}
@@ -178,13 +183,14 @@ class CodeEditor extends Component {
               width: "100%",
               height: "auto",
               position: "absolute",
-              top: "calc(64px + 57px)",
+              top: "calc(64px + 60px)",
               padding: "0.5rem",
               bottom: 0
             }}
           >
             <div className="w-100 shadow-sm" style={{ height: "45%" }}>
               <textarea
+                placeholder="Enter the code here..."
                 value={this.state.code}
                 onKeyDown={e => {
                   if (e.key === "Tab") {
@@ -197,10 +203,10 @@ class CodeEditor extends Component {
                     console.log(this.state.code);
                   }
                 }}
-                className="w-100 h-max-100 p-sm pb-1"
+                className="w-100 h-max-100 p-sm pb-1 textarea2"
                 style={{
                   background: "bottom",
-                  height: "90% !important"
+                  resize: "none"
                 }}
                 onChange={e => this.setState({ code: e.target.value })}
               />
@@ -224,7 +230,7 @@ class CodeEditor extends Component {
               width: "100%",
               height: "auto",
               position: "absolute",
-              top: "calc(64px + 57px)",
+              top: "calc(64px + 60px)",
               padding: "0.75rem",
               bottom: 0
             }}
@@ -243,7 +249,7 @@ class CodeEditor extends Component {
                     console.log(this.state.code);
                   }
                 }}
-                className="w-100 h-max-100 p-sm pb-1"
+                className="w-100 h-max-100 p-sm pb-1 textarea2"
                 style={{
                   background: "bottom"
                 }}

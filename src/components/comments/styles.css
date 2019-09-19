@@ -1,0 +1,25 @@
+.input-tags li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  font-size: 14px;
+  padding-left: 0.5rem;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 1rem;
+}
+
+.input-tags li button {
+  font-size: 14px;
+  background-color: #2980b9;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  font-weight: bold;
+  width: fit-content;
+  border-radius: 1rem;
+  margin: 0;
+  margin-left: 0.5rem;
+  background-color: none;
+}

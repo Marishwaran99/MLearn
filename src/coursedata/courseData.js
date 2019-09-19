@@ -6,28 +6,38 @@ const data = [
     courseContent: [
       {
         lesson: 1,
-        title: "What is HTML",
-        content: `HTML is the standard markup language for Web pages.
-With HTML you can create your own Website. 
-HTML is easy to learn - You will enjoy it!
-
-Examples in Every Chapter
-This HTML tutorial contains hundreds of HTML examples.
-With our online HTML editor, you can edit the HTML, and click on a button to view the result.`
+        title:
+          "Display your family information with background and other formatting.",
+        content: `
+<!DOCTYPE html>
+<html>
+<head> 
+  <title> Family information </title> 
+</head> 
+<body bgcolor="lightgreen" text="blue"> 
+    <p> My name is Abhishek Sharma my Family information is - Father Name - Shri R.K. Sharma Mother Name - ShrimatiAnjulata Sharma Brother Name - Ashish Sharma Sister Name - Richa Sharma 
+    </p> 
+</body> 
+</html>`
       },
       {
         lesson: 2,
-        title: "Basic HTML document structure",
-        content: `HTML is the standard markup language for Web pages.
-                With HTML you can create your own Website. 
-                HTML is easy to learn - You will enjoy it!`
-      },
-      {
-        lesson: 3,
-        title: "Creating your first html page",
-        content: `HTML is the standard markup language for Web pages.
-                With HTML you can create your own Website. 
-                HTML is easy to learn - You will enjoy it!`
+        title: "HTML Formatting",
+        content: `
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bold Text Example</title>
+    </head>        
+    <body>
+      <p>The following word uses a <b>bold</b> typeface.</p>
+      <p>The following word uses an <i>italicized</i> typeface.</p>
+      <p>The following word uses an <u>underlined</u> typeface.</p>
+      <p>The following word uses a <strike>strikethrough</strike> typeface.</p>
+      <p>The following word uses a <big>big</big> typeface.</p>
+      <p>The following word uses a <small>small</small> typeface.</p>
+    </body>      
+</html>`
       }
     ]
   }

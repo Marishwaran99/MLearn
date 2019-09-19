@@ -4,11 +4,7 @@ import courseImg from "../../images/courses.svg";
 import "../../css/style.css";
 class Courses extends Component {
   state = {
-    courses: [
-      { name: "HTML & CSS", desc: "HTML is a web language" },
-      { name: "CSS", desc: "CSS is a web language" },
-      { name: "JS", desc: "JS is a web language" }
-    ]
+    courses: [{ name: "HTML", desc: "HTML is a web language" }]
   };
   render() {
     return (

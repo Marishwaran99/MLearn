@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { addComment } from "../actions/commentAction";
 import { connect } from "react-redux";
 import addCommentImg from "../../images/addComment.svg";
+import "./styles.css";
 class AddComment extends Component {
   state = {
     title: "",
@@ -49,22 +50,54 @@ class AddComment extends Component {
               />
             </div>
             <div className="input-field">
+              <label htmlFor="description">Description</label>
               <textarea
-                placeholder="Description"
                 type="text"
                 id="description"
                 rows="10"
                 onChange={this.handleChange}
+                className="textarea1"
               />
             </div>
             <div className="input-field">
               <label htmlFor="tags">Tags</label>
-              <ul className="input-tags">
+              <ul className="d-flex flex-row flex-wrap w-100 ls-none p-0">
                 {tags.map((tag, i) => {
                   return (
-                    <li key={i}>
+                    <li
+                      key={i}
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginTop: "0.5rem",
+                        marginRight: "0.5rem",
+                        fontSize: "12px",
+                        width: "fit-content",
+                        height: "fit-content",
+                        paddingLeft: "0.5rem",
+                        backgroundColor: "#2980b9",
+                        color: "white",
+                        borderRadius: "1rem"
+                      }}
+                    >
                       {tag}
                       <button
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "transparent",
+                          color: "white",
+                          padding: "0.1rem 0.25rem",
+                          fontWeight: "bold",
+                          width: "fit-content",
+                          height: "fit-content",
+                          borderRadius: "1rem",
+                          margin: 0,
+                          border: "none",
+                          outline: "none",
+                          marginLeft: "0.5rem"
+                        }}
                         className="close-btn"
                         onClick={e => {
                           const newTags = [...this.state.tags];
@@ -78,7 +111,7 @@ class AddComment extends Component {
                   );
                 })}
 
-                <li>
+                <li style={{ display: "block", width: "100%" }}>
                   <input
                     type="text"
                     id="tags"
