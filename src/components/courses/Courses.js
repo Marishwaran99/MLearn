@@ -6,7 +6,8 @@ class Courses extends Component {
   state = {
     courses: [
       { name: "HTML", desc: "HTML is a web language" },
-      { name: "CSS", desc: "CSS is a web language" }
+      { name: "CSS", desc: "CSS is a web language" },
+      { name: "Projects", desc: "Learn through making projects" }
     ]
   };
   render() {

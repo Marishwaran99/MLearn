@@ -36,7 +36,8 @@ class CourseContentDetail extends Component {
                     <p
                       className="my-1"
                       style={{
-                        whiteSpace: "pre-wrap"
+                        whiteSpace: "pre-wrap",
+                        overflowWrap: "break-word"
                       }}
                     >
                       {content.description}
@@ -45,7 +46,13 @@ class CourseContentDetail extends Component {
                   <div className="p-1 brad-2 shadow-sm">
                     <h4 className="my-sm text-primary">Example</h4>
                     {content.contentDesc ? (
-                      <p className="my-1" style={{ whiteSpace: "pre-wrap" }}>
+                      <p
+                        className="my-1"
+                        style={{
+                          whiteSpace: "pre-wrap",
+                          overflowWrap: "break-word"
+                        }}
+                      >
                         {content.contentDesc}
                       </p>
                     ) : null}
@@ -54,7 +61,8 @@ class CourseContentDetail extends Component {
                         background: "#fff",
                         padding: "0.5rem",
                         borderLeft: "4px solid #2980b9",
-                        whiteSpace: "pre-wrap"
+                        whiteSpace: "pre-wrap",
+                        overflowWrap: "break-word"
                       }}
                     >
                       {content.code}

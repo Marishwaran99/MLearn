@@ -1,5 +1,6 @@
 var i = 1;
 var i1 = 1;
+var i2 = 1;
 const data = [
   {
     id: 1,
@@ -461,6 +462,99 @@ And background-repeat: no-repeat makes the background image non repeatable `,
   <body>
   </body>
 </html>`
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Practice Projects",
+    courseContent: [
+      {
+        lesson: i2++,
+        title: "Tribute Page",
+        contents: [
+          {
+            code: `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tribute Page</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="text-container">
+      <h4>Dr.APJ Abdul Kalam</h4>
+      <p>The Missile man of India</p>
+    </div>
+    <div class="img-container">
+    </div>
+  </div>
+</body>
+</html>`,
+            contentDesc: `Create a div element with class name as main container which has two sub div 's  name first div with class as text-container and second div with class name img-container
+
+Place <h4> tag which has a text to whom you want to tribute and <p> tag to describe slogan about that person in the text-container`
+          },
+          {
+            title: "Define styles",
+            code: `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tribute Page</title>
+  <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main-container {
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+      }
+      .text-container {
+        background-color: #e2e2e2;
+        text-align: center;
+        padding: 16px 0;
+      }
+      .img-container {
+        margin: 16px auto;
+        height: 70%;
+        max-width: 90%;
+        background-image: url("https://raw.githubusercontent.com/Mariii123/CSS/master/apjkalam.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="text-container">
+      <h4>Dr.APJ Abdul Kalam</h4>
+      <p>The Missile man of India</p>
+    </div>
+    <div class="img-container">
+    </div>
+  </div>
+</body>
+</html>`,
+            contentDesc: `So, Now comes the designing part, we will add a style tag inside head tag.
+First style is for all which is given by * selector and specify padding and margin value to 0
+
+main-container styles: Here, we are going to have the 100% width and height of screen so width and height property will have values 100vw and 100vh respectively.
+Also, you can have your color for background so specify that color inside background color property
+
+text-container styles: We have a background-color, text-align, padding property for it.Specify the background-color, alignment of text and padding in px
+
+img-container styles: Specify the tribute image as a background-image, with additional property such width and height in percentages to make it more responsive.
+background-size:contain property resize the background image to make sure the image is fully visible.
+background-position:center's the background image.
+Note: bacground-image will work only if the height of the container is specified 
+margin:16px auto places the element to the center horizontally respective to the parent container and 16px margin on top and bottom of element.
+            `
           }
         ]
       }
