@@ -11,9 +11,12 @@ class CourseContent extends Component {
     this.setState({
       id: id
     });
-    this.setState({
-      content: data[id]
-    });
+    this.setState(
+      {
+        content: data[id]
+      },
+      () => (document.title = this.state.content.title + " | MLearn")
+    );
   }
   render() {
     const { content, id } = this.state;
@@ -22,8 +25,10 @@ class CourseContent extends Component {
         <div className="d-flex flex-col w-100 p-1">
           {content ? (
             <div>
-              <h1>{content.title && content.title}</h1>
-              <p>{content.description && content.description}</p>
+              <h1 className="my-1">{content.title && content.title}</h1>
+              <p className="my-sm">
+                {content.description && content.description}
+              </p>
             </div>
           ) : null}
 

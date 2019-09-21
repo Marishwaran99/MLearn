@@ -182,11 +182,7 @@ input[type="text"]:focus {
   align-self: baseline;
   padding: 0.5rem;
 }
-.snippet-code {
-  padding: 16px;
-  background: #eee;
-  border-radius: 0.25rem;
-}
+
 @media only screen and (min-width: 768px) {
   .nav-links-mob.active {
     left: -110vw;
