@@ -43,7 +43,7 @@ class ForgotPassword extends Component {
             Reset Password
           </button>
           <hr className="my-1" />
-          <Link to="/" className="link link-primary mt-1">
+          <Link to="/" className="link link-primary mt-1 d-block text-center">
             Go back to Login Page
           </Link>
         </form>

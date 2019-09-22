@@ -52,7 +52,7 @@ class Login extends Component {
           </div>
           <Link
             to="/forgot-password"
-            className="w-100 link link-primary px-auto"
+            className="w-100 link link-primary d-block text-right"
           >
             Forgot password?
           </Link>
@@ -61,7 +61,7 @@ class Login extends Component {
           </button>
 
           <hr className="my-1" />
-          <Link to="/register" className="link link-primary mt-1 mx-auto">
+          <Link to="/register" className="link link-primary mt-1 d-block text-center">
             New Here? Create New Account
           </Link>
         </form>

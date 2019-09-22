@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import data from "../../coursedata/courseData";
+import data1 from "../../coursedata/conceptCourse";
 import { Link } from "react-router-dom";
 class CourseContent extends Component {
   state = {
@@ -11,12 +12,21 @@ class CourseContent extends Component {
     this.setState({
       id: id
     });
-    this.setState(
-      {
-        content: data[id]
-      },
-      () => (document.title = this.state.content.title + " | MLearn")
-    );
+    if (data[id]) {
+      this.setState(
+        {
+          content: data[id]
+        },
+        () => (document.title = this.state.content.title + " | MLearn")
+      );
+    } else {
+      this.setState(
+        {
+          content: data1[id % data.length]
+        },
+        () => (document.title = this.state.content.title + " | MLearn")
+      );
+    }
   }
   render() {
     const { content, id } = this.state;

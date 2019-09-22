@@ -66,7 +66,7 @@ class Register extends Component {
               Register
             </button>
             <hr className="my-1" />
-            <Link to="/" className="link link-primary mt-1">
+            <Link to="/" className="link link-primary mt-1 d-block text-center">
               Already Have an Account? Login Here
             </Link>
           </form>

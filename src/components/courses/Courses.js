@@ -8,9 +8,15 @@ class Courses extends Component {
       { name: "HTML", desc: "HTML is a web language" },
       { name: "CSS", desc: "CSS is a web language" },
       { name: "JavaScript", desc: "JavaScript is a web language" },
-      { name: "Projects", desc: "Learn through making projects" }
+      { name: "Projects", desc: "Learn through making projects" },
+      { name: "Machine Learning", desc: "Learn Machine Learning" },
+      { name: "Aritficial Intelligence", desc: "Learn Artifical Intelligence" }
     ]
   };
+  componentDidMount() {
+    document.title = "Courses | MLearn";
+  }
+
   render() {
     return (
       <div className="container">
