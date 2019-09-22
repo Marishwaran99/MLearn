@@ -1,6 +1,7 @@
 var i = 1;
 var i1 = 1;
 var i2 = 1;
+var i3 = 1;
 const data = [
   {
     id: 1,
@@ -806,6 +807,59 @@ Inside box shadow, we specify value as x-offset y-offset and color`,
     </div>
 </body>
 </html>
+`
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "JavaScript",
+    description: `JavaScript is the programming language of HTML and the Web.
+
+JavaScript is easy to learn.`,
+    courseContent: [
+      {
+        lesson: i3++,
+        title:
+          "Create a simple multiplication table asking the user for the input",
+        contents: [
+          {
+            contentDesc: `Here, we are having a script tag inside body.We will ask for user input for accepting a number.
+
+var n = prompt("Enter a number") will create a popup which asks for user input and assigns the user input to variable n
+
+Inside for loop
+Statement 1 sets a variable before the loop starts (var i = 1).
+Statement 2 defines the condition for the loop to run (i must be less than or equal to 10).
+Statement 3 increases a value (i++) each time the code block in the loop has been executed
+
+document.write() is used for displaying output
+
+`,
+            code: `
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication table</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2>Multiplication Table</h2>
+    </div>
+    <script type="text/javascript">
+      var n = prompt("Enter the number");
+      var m;
+      for (var i = 1;i <= 10; i++){
+        m = n * i;
+        document.write("<p>" + n + " x " + i + " = " + m + "</p>")
+      }
+    </script>
+  </body>
+</html>
+
 `
           }
         ]

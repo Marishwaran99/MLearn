@@ -7,6 +7,7 @@ class Courses extends Component {
     courses: [
       { name: "HTML", desc: "HTML is a web language" },
       { name: "CSS", desc: "CSS is a web language" },
+      { name: "JavaScript", desc: "JavaScript is a web language" },
       { name: "Projects", desc: "Learn through making projects" }
     ]
   };
