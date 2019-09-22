@@ -112,6 +112,7 @@ class CommentDetails extends Component {
                 <textarea
                   type="text"
                   id="reply"
+                  className="textarea1"
                   value={this.state.description}
                   onChange={this.handleChange}
                   required
@@ -132,9 +133,13 @@ class CommentDetails extends Component {
             <div className="d-flex flex-col">
               {comment ? (
                 replies ? (
-                  replies.map((reply, i) => {
-                    return <Reply key={i} reply={reply} />;
-                  })
+                  replies.length > 0 ? (
+                    replies.map((reply, i) => {
+                      return <Reply key={i} reply={reply} />;
+                    })
+                  ) : (
+                    <p>No Replies yet..</p>
+                  )
                 ) : (
                   <p>No Replies yet..</p>
                 )

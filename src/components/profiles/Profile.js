@@ -36,11 +36,6 @@ class Profile extends Component {
               </div>
             </div>
             <hr />
-            <div className="my-courses-container">
-              <h4 className="my-sm">My Courses</h4>
-              <p className="my-sm">List of courses</p>
-            </div>
-            <hr />
             <div className="my-codes-container my-1">
               <h4>My Codes</h4>
               <div className="mt-1">

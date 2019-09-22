@@ -18,7 +18,8 @@ class Comments extends Component {
     });
   };
   render() {
-    const { comments } = this.props;
+    const { comments, tags } = this.props;
+
     var sortedComments = comments ? comments.slice() : null;
     var filter = this.state.filter;
     if (filter === "replies")
