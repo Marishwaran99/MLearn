@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tribute Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
       .main-container {
-        background-color: #fff;
-        width: 100vw;
-        height: 100vh;
+        background: lightblue;
+        padding: 16px;
       }
-      .text-container {
-        background-color: #e2e2e2;
+      h2,
+      h4 {
         text-align: center;
-        padding: 16px 0;
+        margin: 8px 0px;
       }
-      .img-container {
-        margin: 16px auto;
-        height: 70%;
-        max-width: 90%;
-        background-image: url("https://raw.githubusercontent.com/Mariii123/CSS/master/apjkalam.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+      .form-container {
+        background: #e2e2e2;
+        text-align: left;
+        padding: 16px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: lightblue;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      input[type="radio"] {
+        width: fit-content;
+        margin: 8px;
       }
     </style>
   </head>
   <body>
     <div class="main-container">
-      <div class="text-container">
-        <h2>Dr.APJ Abdul Kalam</h2>
-        <p>The Missile man of India</p>
-      </div>
-      <div class="img-container"></div>
+      <h2>Survey Form</h2>
+      <form class="form-container">
+        <h4>Let us know how we can improve MLearn</h4>
+        <label for="name">First Name</label>
+        <input type="text" id="name" placeholder="Your name.." />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Your Email Address.." />
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Your Age.." />
+        <label for="country">Which role suits you the best?</label>
+        <select id="country" name="country">
+          <option value="Student">Student</option>
+          <option value="Developer">Developer</option>
+          <option value="Other">Other</option>
+        </select>
+        <p>How Likely would you recommend MLearn to your friend</p>
+        <input type="radio" name="r1" id="r1" value="Definately" />Definately
+        <input type="radio" name="r1" id="r2" value="Not Sure" />Not Sure
+        <input type="radio" name="r1" id="r3" value="May be" />May be
+        <input type="submit" value="Submit" />
+      </form>
     </div>
   </body>
 </html>

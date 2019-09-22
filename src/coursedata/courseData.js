@@ -464,6 +464,351 @@ And background-repeat: no-repeat makes the background image non repeatable `,
 </html>`
           }
         ]
+      },
+      {
+        title: "Create a image using box shadow",
+        lesson: i1++,
+        contents: [
+          {
+            contentDesc: `In this tutorial we are going to create a mario image using box shadow`,
+            code: `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mario</title>
+</head>
+<body>
+    <div class="mario-block">
+        <div class="mario"></div>
+    </div>
+</body>
+</html>`
+          },
+          {
+            contentDesc: `Specify the width and height of image,remember 1em = 16px, every block of image is 16px i.e 1em, centering the image using position absolute
+            
+Now, actual image div we specify the width and height of block as 1em box-shadow has grid like structure which has a width and height of parent element, here parent element has 16 x 17 em so itt forms a 16x17 grid if width of image block is 1em
+
+Inside box shadow, we specify value as x-offset y-offset and color`,
+            code: `<!DOCTYPE html>
+<html>
+<head>
+    <title>Mario</title>
+    <style>
+      .mario-block{
+        width: 16em;
+        height: 17em;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+    
+    }
+    .mario{
+        display: block;
+        width: 1em;
+        height: 1em;
+        background-color: #e7eef1;
+        box-shadow: 
+        0em 0em #e7eef1,
+        1em 0em #e7eef1,
+        2em 0em #e7eef1,
+        3em 0em #e7eef1,
+        4em 0em #e7eef1,
+        5em 0em #e7eef1,
+        6em 0em #e7eef1,
+        7em 0em #e7eef1,
+        8em 0em #e7eef1,
+        9em 0em #e7eef1,
+        10em 0em #e7eef1,
+        11em 0em #e7eef1,
+        12em 0em #e7eef1,
+        13em 0em #e7eef1,
+        14em 0em #e7eef1,
+        15em 0em #e7eef1,
+
+        0em 1em #e7eef1,
+        1em 1em #e7eef1,
+        2em 1em #e7eef1,
+        3em 1em #e7eef1,
+        4em 1em #f00,
+        5em 1em #f00,
+        6em 1em #f00,
+        7em 1em #f00,
+        8em 1em #f00,
+        9em 1em #e7eef1,
+        10em 1em #e7eef1,
+        11em 1em #e7eef1,
+        12em 1em #e7eef1,
+        13em 1em #e7eef1,
+        14em 1em #e7eef1,
+        15em 1em #e7eef1,
+        0em 2em #e7eef1,
+        1em 2em #e7eef1,
+        2em 2em #e7eef1,
+        3em 2em #f00,
+        4em 2em #f00,
+        5em 2em #f00,
+        6em 2em #f00,
+        7em 2em #f00,
+        8em 2em #f00,
+        9em 2em #f00,
+        10em 2em #f00,
+        11em 2em #f00,
+        12em 2em #e7eef1,
+        13em 2em #e7eef1,
+        14em 2em #e7eef1,
+        15em 2em #e7eef1,
+
+        0em 3em #e7eef1,
+        1em 3em #e7eef1,
+        2em 3em #e7eef1,
+        3em 3em brown,
+        4em 3em brown,
+        5em 3em brown,
+        6em 3em #ffad60,
+        7em 3em #ffad60,
+        8em 3em #000,
+        9em 3em #ffad60,
+        10em 3em #e7eef1,
+        11em 3em #e7eef1,
+        12em 3em #e7eef1,
+        13em 3em #e7eef1,
+        14em 3em #e7eef1,
+        15em 3em #e7eef1,
+
+        0em 4em #e7eef1,
+        1em 4em #e7eef1,
+        2em 4em brown,
+        3em 4em #ffad60,
+        4em 4em brown,
+        5em 4em #ffad60,
+        6em 4em #ffad60,
+        7em 4em #ffad60,
+        8em 4em #000,
+        9em 4em #ffad60,
+        10em 4em #ffad60,
+        11em 4em #ffad60,
+        12em 4em #e7eef1,
+        13em 4em #e7eef1,
+        14em 4em #e7eef1,
+        15em 4em #e7eef1,
+
+        0em 5em #e7eef1,
+        1em 5em #e7eef1,
+        2em 5em brown,
+        3em 5em #ffad60,
+        4em 5em brown,
+        5em 5em brown,
+        6em 5em #ffad60,
+        7em 5em #ffad60,
+        8em 5em #ffad60,
+        9em 5em #000,
+        10em 5em #ffad60,
+        11em 5em #ffad60,
+        12em 5em #ffad60,
+        13em 5em #e7eef1,
+        14em 5em #e7eef1,
+        15em 5em #e7eef1,
+
+        0em 6em #e7eef1,
+        1em 6em #e7eef1,
+        2em 6em #e7eef1,
+        3em 6em brown,
+        4em 6em #ffad60,
+        5em 6em #ffad60,
+        6em 6em #ffad60,
+        7em 6em #ffad60,
+        8em 6em #000,
+        9em 6em #000,
+        10em 6em #000,
+        11em 6em #000,
+        12em 6em #e7eef1,
+        13em 6em #e7eef1,
+        14em 6em #e7eef1,
+        15em 6em #e7eef1,
+
+        0em 7em #e7eef1,
+        1em 7em #e7eef1,
+        2em 7em #e7eef1,
+        3em 7em #e7eef1,
+        4em 7em #ffad60,
+        5em 7em #ffad60,
+        6em 7em #ffad60,
+        7em 7em #ffad60,
+        8em 7em #ffad60,
+        9em 7em #ffad60,
+        10em 7em #e7eef1,
+        11em 7em #e7eef1,
+        12em 7em #e7eef1,
+        13em 7em #e7eef1,
+        14em 7em #e7eef1,
+        15em 7em #e7eef1,
+
+        0em 8em #e7eef1,
+        1em 8em #e7eef1,
+        2em 8em #e7eef1,
+        3em 8em red,
+        4em 8em red,
+        5em 8em blue,
+        6em 8em red,
+        7em 8em red,
+        8em 8em blue,
+        9em 8em red,
+        10em 8em red,
+        11em 8em #e7eef1,
+        12em 8em #e7eef1,
+        13em 8em #e7eef1,
+        14em 8em #e7eef1,
+        15em 8em #e7eef1,
+
+        0em 9em #e7eef1,
+        1em 9em #e7eef1,
+        2em 9em red,
+        3em 9em red,
+        4em 9em red,
+        5em 9em blue,
+        6em 9em red,
+        7em 9em red,
+        8em 9em blue,
+        9em 9em red,
+        10em 9em red,
+        11em 9em red,
+        12em 9em #e7eef1,
+        13em 9em #e7eef1,
+        14em 9em #e7eef1,
+        15em 9em #e7eef1,
+
+        0em 10em #e7eef1,
+        1em 10em red,
+        2em 10em red,
+        3em 10em red,
+        4em 10em red,
+        5em 10em blue,
+        6em 10em blue,
+        7em 10em blue,
+        8em 10em blue,
+        9em 10em red,
+        10em 10em red,
+        11em 10em red,
+        12em 10em red,
+        13em 10em #e7eef1,
+        14em 10em #e7eef1,
+        15em 10em #e7eef1,
+
+        0em 11em #e7eef1,
+        1em 11em #ffad60,
+        2em 11em #ffad60,
+        3em 11em red,
+        4em 11em blue,
+        5em 11em yellow,
+        6em 11em blue,
+        7em 11em blue,
+        8em 11em yellow,
+        9em 11em blue,
+        10em 11em red,
+        11em 11em #ffad60,
+        12em 11em #ffad60,
+        13em 11em #e7eef1,
+        14em 11em #e7eef1,
+        15em 11em #e7eef1,
+
+        0em 12em #e7eef1,
+        1em 12em #ffad60,
+        2em 12em #ffad60,
+        3em 12em #ffad60,
+        4em 12em blue,
+        5em 12em blue,
+        6em 12em blue,
+        7em 12em blue,
+        8em 12em blue,
+        9em 12em blue,
+        10em 12em #ffad60,
+        11em 12em #ffad60,
+        12em 12em #ffad60,
+        13em 12em #e7eef1,
+        14em 12em #e7eef1,
+        15em 12em #e7eef1,
+
+        0em 13em #e7eef1,
+        1em 13em #ffad60,
+        2em 13em #ffad60,
+        3em 13em blue,
+        4em 13em blue,
+        5em 13em blue,
+        6em 13em blue,
+        7em 13em blue,
+        8em 13em blue,
+        9em 13em blue,
+        10em 13em blue,
+        11em 13em #ffad60,
+        12em 13em #ffad60,
+        13em 13em #e7eef1,
+        14em 13em #e7eef1,
+        15em 13em #e7eef1,
+
+        0em 14em #e7eef1,
+        1em 14em #e7eef1,
+        2em 14em #e7eef1,
+        3em 14em blue,
+        4em 14em blue,
+        5em 14em blue,
+        6em 14em #e7eef1,
+        7em 14em #e7eef1,
+        8em 14em blue,
+        9em 14em blue,
+        10em 14em blue,
+        11em 14em #e7eef1,
+        12em 14em #e7eef1,
+        13em 14em #e7eef1,
+        14em 14em #e7eef1,
+        15em 14em #e7eef1,
+
+        0em 15em #e7eef1,
+        1em 15em #e7eef1,
+        2em 15em brown,
+        3em 15em brown,
+        4em 15em brown,
+        5em 15em #e7eef1,
+        6em 15em #e7eef1,
+        7em 15em #e7eef1,
+        8em 15em #e7eef1,
+        9em 15em brown,
+        10em 15em brown,
+        11em 15em brown,
+        12em 15em brown,
+        13em 15em #e7eef1,
+        14em 15em #e7eef1,
+        15em 15em #e7eef1,
+
+        0em 16em #e7eef1,
+        1em 16em brown,
+        2em 16em brown,
+        3em 16em brown,
+        4em 16em brown,
+        5em 16em #e7eef1,
+        6em 16em #e7eef1,
+        7em 16em #e7eef1,
+        8em 16em #e7eef1,
+        9em 16em brown,
+        10em 16em brown,
+        11em 16em brown,
+        12em 16em brown,
+        13em 16em brown,
+        14em 16em #e7eef1,
+        15em 16em #e7eef1;
+    }  
+    </style>
+</head>
+<body>
+    <div class="mario-block">
+        <div class="mario"></div>
+    </div>
+</body>
+</html>
+`
+          }
+        ]
       }
     ]
   },
@@ -547,6 +892,152 @@ First style is for all which is given by * selector and specify padding and marg
 main-container styles: Here, we are going to have the 100% width and height of screen so width and height property will have values 100vw and 100vh respectively.
 Also, you can have your color for background so specify that color inside background color property
 
+text-container styles: We have a background-color, text-align, padding property for it.Specify the background-color, alignment of text and padding in px
+
+img-container styles: Specify the tribute image as a background-image, with additional property such width and height in percentages to make it more responsive.
+background-size:contain property resize the background image to make sure the image is fully visible.
+background-position:center's the background image.
+Note: bacground-image will work only if the height of the container is specified 
+margin:16px auto places the element to the center horizontally respective to the parent container and 16px margin on top and bottom of element.
+            `
+          }
+        ]
+      },
+      {
+        lesson: i2++,
+        title: "Survey Form",
+        contents: [
+          {
+            code: `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+  </head>
+  <body>
+  <body>
+  <div class="main-container">
+    <h2>Survey Form</h2>
+    <form class="form-container">
+      <h4>Let us know how we can improve MLearn</h4>
+      <label for="name">First Name</label>
+      <input type="text" id="name" placeholder="Your name.." />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Your Email Address.." />
+      <label for="age">Age</label>
+      <input type="number" id="age" placeholder="Your Age.." />
+      <label for="country">Which role suits you the best?</label>
+      <select id="country" name="country">
+        <option value="Student">Student</option>
+        <option value="Developer">Developer</option>
+        <option value="Other">Other</option>
+      </select>
+      <p>How Likely would you recommend MLearn to your friend</p>
+      <input type="radio" name="r1" id="r1" value="Definately" />Definately
+      <input type="radio" name="r1" id="r2" value="Not Sure" />Not Sure
+      <input type="radio" name="r1" id="r3" value="May be" />May be
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+</html>            
+            `,
+            contentDesc: `We are going to have a div with class name man-container which has has a div with class name as form-container which will contain form objects
+We will have label and input tags inside the form tags
+We will add all inputs required for the survey form`
+          },
+          {
+            title: "Define styles",
+            code: `
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-container {
+        background: lightblue;
+        padding: 16px;
+      }
+      h2,
+      h4 {
+        text-align: center;
+        margin: 8px 0px;
+      }
+      .form-container {
+        background: #e2e2e2;
+        text-align: left;
+        padding: 16px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: lightblue;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      input[type="radio"] {
+        width: fit-content;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2>Survey Form</h2>
+      <form class="form-container">
+        <h4>Let us know how we can improve MLearn</h4>
+        <label for="name">First Name</label>
+        <input type="text" id="name" placeholder="Your name.." />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Your Email Address.." />
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Your Age.." />
+        <label for="country">Which role suits you the best?</label>
+        <select id="country" name="country">
+          <option value="Student">Student</option>
+          <option value="Developer">Developer</option>
+          <option value="Other">Other</option>
+        </select>
+        <p>How Likely would you recommend MLearn to your friend</p>
+        <input type="radio" name="r1" id="r1" value="Definately" />Definately
+        <input type="radio" name="r1" id="r2" value="Not Sure" />Not Sure
+        <input type="radio" name="r1" id="r3" value="May be" />May be
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>            
+            `,
+            contentDesc: `So, Now comes the designing part, we will add a style tag inside head tag.
+First style is for all which is given by * selector and specify padding and margin value to 0
+and box-sizing
+main-container styles: It contains your color for background and padding in pixels
+
+We have two headings in our main container h2 and h4, we specify the text-align and margin property.text-align:center makes the  text horizontally center in the screen, margin:8px 0px adds top and bottom margin as 8px and left an right margin as 0px
+
+form-container styles: Similar to the main container apply styles to form-container.
+
+input styles: Have a input selector and specify some padding, margin and widths, border 
 text-container styles: We have a background-color, text-align, padding property for it.Specify the background-color, alignment of text and padding in px
 
 img-container styles: Specify the tribute image as a background-image, with additional property such width and height in percentages to make it more responsive.
