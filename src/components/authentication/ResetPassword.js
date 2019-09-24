@@ -29,7 +29,7 @@ class ForgotPassword extends Component {
           onSubmit={this.handleSubmit}
           className="w-75 sm-w-80 xs-w-100 mx-auto flex-col"
         >
-          <h1 className="mb-2 mt-1">Forgot your Password</h1>
+          <h2 className="mb-2 mt-1 text-center">Forgot your Password?</h2>
           <div className="input-field">
             <label htmlFor="email">Email Address</label>
             <input

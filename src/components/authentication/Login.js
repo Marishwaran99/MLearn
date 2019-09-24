@@ -31,7 +31,7 @@ class Login extends Component {
           onSubmit={this.handleSubmit}
           className="w-75 sm-w-80 xs-w-100 h-min-100 mx-auto flex-col"
         >
-          <h1 className="mt-1 mb-2">Login</h1>
+          <h2 className="mt-1 mb-2 text-center">Login</h2>
           <div className="input-field">
             <label htmlFor="email">Email address</label>
             <input
@@ -61,7 +61,10 @@ class Login extends Component {
           </button>
 
           <hr className="my-1" />
-          <Link to="/register" className="link link-primary mt-1 d-block text-center">
+          <Link
+            to="/register"
+            className="link link-primary mt-1 d-block text-center"
+          >
             New Here? Create New Account
           </Link>
         </form>

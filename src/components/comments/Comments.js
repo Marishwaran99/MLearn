@@ -37,38 +37,42 @@ class Comments extends Component {
               : -1
           )
         : null;
-    return (
-      <div className="container">
-        <div className="d-flex flex-col w-100">
-          <h1 className="my-sm">Comments</h1>
-          <select onChange={this.handleSelectChange}>
-            <option value="createdAt">Date</option>
-            <option value="replies">Replies</option>
-          </select>
-          {sortedComments ? (
-            sortedComments.map(comment => {
-              return (
-                <Link
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                    outline: "none"
-                  }}
-                  className="card-container"
-                  key={comment.id}
-                  to={`/comments/comment/${comment.id}`}
-                >
-                  <Comment comment={comment} />
-                  <hr />
-                </Link>
-              );
-            })
-          ) : (
-            <Loading />
-          )}
+    if (sortedComments)
+      return (
+        <div className="container">
+          <div className="d-flex flex-col w-100">
+            <h1 className="my-sm">Comments</h1>
+            <select onChange={this.handleSelectChange}>
+              <option value="createdAt">Date</option>
+              <option value="replies">Replies</option>
+            </select>
+            {sortedComments ? (
+              sortedComments.map(comment => {
+                return (
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "black",
+                      outline: "none"
+                    }}
+                    className="card-container"
+                    key={comment.id}
+                    to={`/comments/comment/${comment.id}`}
+                  >
+                    <Comment comment={comment} />
+                    <hr />
+                  </Link>
+                );
+              })
+            ) : (
+              <Loading />
+            )}
+          </div>
         </div>
-      </div>
-    );
+      );
+    else {
+      return <Loading />;
+    }
   }
 }
 
