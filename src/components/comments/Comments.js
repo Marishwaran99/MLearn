@@ -5,6 +5,7 @@ import { firestoreConnect } from "react-redux-firebase";
 import Comment from "./Comment";
 import { Link } from "react-router-dom";
 import discussion from "../../images/discussion.svg";
+import Loading from "../Loading";
 class Comments extends Component {
   state = {
     filter: "createdAt"
@@ -63,7 +64,7 @@ class Comments extends Component {
               );
             })
           ) : (
-            <p>Loading...</p>
+            <Loading />
           )}
         </div>
       </div>

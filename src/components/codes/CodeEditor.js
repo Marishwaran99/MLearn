@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import AceEditor from "react-ace";
-import "brace/mode/html";
-import "brace/mode/css";
-import "brace/mode/javascript";
-import "brace/theme/xcode";
+import { Link } from "react-router-dom";
 import { uploadCode, updateCode } from "../actions/codeActions";
 import { connect } from "react-redux";
 import { compose } from "redux";
@@ -132,9 +128,12 @@ class CodeEditor extends Component {
               />
             </>
           ) : (
-            <p className="h-100 c-pointer p-sm text-primary asb">
-              Login to save
-            </p>
+            <Link
+              className="text-deco-none c-pointer p-sm text-primary asb"
+              to="/"
+            >
+              <p>Login to save</p>
+            </Link>
           )}
           <i
             onClick={() =>
@@ -249,6 +248,7 @@ class CodeEditor extends Component {
                     console.log(this.state.code);
                   }
                 }}
+                placeholder="Enter the code here..."
                 className="w-100 h-max-100 p-sm pb-1 textarea2"
                 style={{
                   background: "bottom"

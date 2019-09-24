@@ -67,9 +67,9 @@ class Navbar extends Component {
             }}
           >
             {this.props.nav === "active" ? (
-              <i className="fa fa-times" />
+              <i className="fa fa-times" style={{ fontSize: 18 }} />
             ) : (
-              <i className="fa fa-bars" />
+              <i className="fa fa-bars" style={{ fontSize: 18 }} />
             )}
           </button>
         </div>

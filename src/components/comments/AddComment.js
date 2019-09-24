@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { addComment } from "../actions/commentAction";
 import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
 import addCommentImg from "../../images/addComment.svg";
 import "./styles.css";
 class AddComment extends Component {
@@ -158,7 +159,7 @@ class AddComment extends Component {
           </form>
         </div>
       );
-    return <p>Login to comment</p>;
+    return <Redirect to="/" />;
   }
 }
 const mapDispatchToProps = dispatch => {

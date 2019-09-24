@@ -7,6 +7,7 @@ import { addReply } from "../actions/commentAction";
 import { Link } from "react-router-dom";
 import Reply from "./Reply";
 import moment from "moment";
+import Loading from "../Loading";
 class CommentDetails extends Component {
   state = {
     id: "",
@@ -104,7 +105,7 @@ class CommentDetails extends Component {
                 <hr />
               </div>
             ) : (
-              <p>Loading...</p>
+              <Loading />
             )}
             {this.props.auth.uid ? (
               <form className="d-flex flex-col my-1" onSubmit={this.reply}>
@@ -121,8 +122,8 @@ class CommentDetails extends Component {
                 <button className="btn primary">Reply</button>
               </form>
             ) : (
-              <div>
-                <p>Login to Reply</p>
+              <div className="my-sm">
+                <p className="my-sm">Login to Reply</p>
                 <Link to="/">
                   <button className="btn primary">Login</button>
                 </Link>
@@ -144,14 +145,14 @@ class CommentDetails extends Component {
                   <p>No Replies yet..</p>
                 )
               ) : (
-                <p>Loading....</p>
+                <Loading />
               )}
             </div>
           </div>
         </div>
       );
     } else {
-      return <p>Loading..</p>;
+      return <Loading />;
     }
   }
 }

@@ -4,25 +4,30 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { Link } from "react-router-dom";
 import Code from "../codes/Code";
+import Loading from "../Loading";
 class CodeList extends Component {
   render() {
     const { codes } = this.props;
     return (
       <div>
         {codes ? (
-          codes.map((code, i) => {
-            return (
-              <Link
-                key={code.id}
-                to={`/web-compiler/${code.id}`}
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                <Code code={code} />
-              </Link>
-            );
-          })
+          codes.length > 0 ? (
+            codes.map((code, i) => {
+              return (
+                <Link
+                  key={code.id}
+                  to={`/web-compiler/${code.id}`}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <Code code={code} />
+                </Link>
+              );
+            })
+          ) : (
+            <p>No codes yet</p>
+          )
         ) : (
-          <p>No codes yet</p>
+          <Loading />
         )}
       </div>
     );
