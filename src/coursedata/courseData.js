@@ -7,6 +7,17 @@ const data = [
     id: 1,
     noOfLearners: 0,
     title: "HTML",
+    description: `Originally, HTML was developed with the intent of defining the structure of documents like headings, paragraphs, lists, and so forth to facilitate the sharing of scientific information between researchers. Now, HTML is being widely used to format web pages with the help of different tags available in HTML language.
+
+HTML is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning HTML:
+
+Create Web site - You can create a website or customize an existing web template if you know HTML well.
+
+Become a web designer - If you want to start a carrer as a professional web designer, HTML and CSS designing is a must skill.
+
+Understand web - If you want to optimize your website, to boost its speed and performance, it is good to know HTML to yield best results.
+
+Learn other languages - Once you understands the basic of HTML then other related technologies like javascript, php, or angular are become easier to understand.`,
     courseContent: [
       {
         lesson: i++,
@@ -42,6 +53,7 @@ HEAD and BODY. These elements are required to form any HTML document.
           "Display your family information with background and other formatting.",
         contents: [
           {
+            description: `<body> has attribute such as bgColor for background color and color of the text for element inside body tag given by text attribute`,
             code: `
 <!DOCTYPE html>
 <html>
@@ -144,7 +156,13 @@ HEAD and BODY. These elements are required to form any HTML document.
   </TABLE>
   </body>
 </html>`,
-            description: ` Table tag is used to create tables `
+            description: `The <table> tag defines an HTML table.
+
+An HTML table consists of the <table> element and one or more <tr>, <th>, and <td> elements.
+
+The <tr> element defines a table row, the <th> element defines a table header, and the <td> element defines a table cell.
+
+<caption> tag sets the titile for table`
           }
         ]
       },
@@ -225,7 +243,24 @@ HEAD and BODY. These elements are required to form any HTML document.
     </table>
   </body>
 </html>`,
-            description: ` Table tag is used to create tables `
+            description: `The <table> tag defines an HTML table.
+
+An HTML table consists of the <table> element and one or more <tr>, <th>, and <td> elements.
+
+The <tr> element defines a table row, the <th> element defines a table header, and the <td> element defines a table cell.
+
+<caption> tag sets the titile for table
+
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Small text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text`
           }
         ]
       },
@@ -241,7 +276,11 @@ HEAD and BODY. These elements are required to form any HTML document.
   <center><img src="https://raw.githubusercontent.com/Mariii123/bootstrap-4-projects/design1/01-thumbnail.jpg" width="200" height="200"/>
 </body>
 </html>`,
-            description: `<img> tag is used to insert images in web page `
+            description: `In HTML, images are defined with the <img> tag.
+
+The <img> tag is empty, it contains attributes only, and does not have a closing tag.
+
+The src attribute specifies the URL (web address) of the image`
           }
         ]
       },
@@ -358,7 +397,20 @@ HEAD and BODY. These elements are required to form any HTML document.
       </form>
     </center>
   </body>
-</html>`
+</html>`,
+            description: `The HTML <form> element defines a form that is used to collect user input
+
+<input type="text"> defines a one-line input field for text input
+
+The <input type="email"> is used for input fields that should contain an e-mail address.Depending on browser support, the e-mail address can be automatically validated when submitted
+
+<input type="radio"> defines a radio button which allows user select ONE of a limited number of choices
+
+<input type="checkbox"> defines a checkbox which let's user select ZERO or MORE options of a limited number of choices
+
+The <input type="file"> defines a file-select field and a "Browse" button for file uploads.
+
+<input type="password"> defines a password field`
           }
         ]
       }
@@ -368,8 +420,15 @@ HEAD and BODY. These elements are required to form any HTML document.
     id: 2,
     noOfLearners: 0,
     title: "CSS",
-    description:
-      "CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes. ",
+    description: `CSS tutorial  provides basic and advanced concepts of CSS technology. Our CSS tutorial is developed for beginners. The major points of CSS are given below:
+
+CSS stands for Cascading Style Sheet.
+
+CSS is used to design HTML tags.
+
+CSS is a widely used language on the web.
+
+HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.`,
     courseContent: [
       {
         title: "CSS Syntax",
@@ -816,9 +875,12 @@ Inside box shadow, we specify value as x-offset y-offset and color`,
   {
     id: 2,
     title: "JavaScript",
-    description: `JavaScript is the programming language of HTML and the Web.
+    description: `JavaScript is used to create client-side dynamic pages.
 
-JavaScript is easy to learn.`,
+JavaScript is an object-based scripting language which is lightweight and cross-platform.
+
+JavaScript is not a compiled language, but it is a translated language. The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.
+`,
     courseContent: [
       {
         lesson: i3++,

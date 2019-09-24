@@ -5,12 +5,35 @@ import "../../css/style.css";
 class Courses extends Component {
   state = {
     courses: [
-      { name: "HTML", desc: "HTML is a web language" },
-      { name: "CSS", desc: "CSS is a web language" },
-      { name: "JavaScript", desc: "JavaScript is a web language" },
-      { name: "Projects", desc: "Learn through making projects" },
-      { name: "Machine Learning", desc: "Learn Machine Learning" },
-      { name: "Aritficial Intelligence", desc: "Learn Artifical Intelligence" }
+      {
+        name: "HTML",
+        desc:
+          "In this tutorial you will learn HTML through hands on practical which will make you more interesting to learn"
+      },
+      {
+        name: "CSS",
+        desc:
+          "In this tutorial you will learn CSS through hands on practical which will make you more interesting to learn"
+      },
+      {
+        name: "JavaScript",
+        desc:
+          "In this tutorial you learn JavaScript through hands on practical which will make you more interesting to learn"
+      },
+      {
+        name: "Projects",
+        desc:
+          "Once you done with some basics of HTML, CSS, JavaScript now put that learning into some mini projects to improve your skills"
+      },
+      {
+        name: "Machine Learning",
+        desc: "Here, you can find some basic information about Machine Learning"
+      },
+      {
+        name: "Aritficial Intelligence",
+        desc:
+          "Here, you can find some basic information about Artificial Intelligence"
+      }
     ]
   };
   componentDidMount() {

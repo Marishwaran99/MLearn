@@ -36,7 +36,10 @@ class CourseContent extends Component {
           {content ? (
             <div>
               <h1 className="my-1">{content.title && content.title}</h1>
-              <p className="my-sm">
+              <p
+                className="my-sm"
+                style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}
+              >
                 {content.description && content.description}
               </p>
             </div>
@@ -55,7 +58,12 @@ class CourseContent extends Component {
                     className="d-flex flex-row aic white w-100 link link-black w-100"
                   >
                     <p className="pr-1">{i + 1}</p>
-                    <p className="py-1 bb-1 w-100">{c.title}</p>
+                    <p
+                      style={{ borderColor: "#e2e2e2" }}
+                      className="py-1 bb-1 w-100"
+                    >
+                      {c.title}
+                    </p>
                   </Link>
                 );
               })}

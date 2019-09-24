@@ -34,7 +34,7 @@ class Register extends Component {
             onSubmit={this.handleSubmit}
             className="w-75 sm-w-80 xs-w-100 mx-auto flex-col"
           >
-            <h2 className="mb-2 mt-1 text-center">Register</h2>
+            <h2 className="mb-2 mt-1">Register</h2>
             <div className="input-field">
               <label htmlFor="username">Username</label>
               <input

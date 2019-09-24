@@ -51,6 +51,7 @@ class CourseContentDetail extends Component {
                         <p
                           className="my-1"
                           style={{
+                            fontSize: 16,
                             whiteSpace: "pre-wrap",
                             overflowWrap: "break-word"
                           }}
@@ -77,7 +78,8 @@ class CourseContentDetail extends Component {
                             padding: "0.5rem",
                             borderLeft: "4px solid #2980b9",
                             whiteSpace: "pre-wrap",
-                            overflowWrap: "break-word"
+                            overflowWrap: "break-word",
+                            fontSize: 16
                           }}
                         >
                           {content.code}

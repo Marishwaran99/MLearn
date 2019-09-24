@@ -40,7 +40,7 @@ class AddComment extends Component {
             className="d-flex flex-col jcc w-100 p-1"
             onSubmit={this.postComment}
           >
-            <h1 className="my-1">Add Comment</h1>
+            <h2 className="my-1">Add Comment</h2>
             <div className="input-field">
               <label htmlFor="title">Title</label>
               <input
