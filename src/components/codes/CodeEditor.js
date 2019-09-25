@@ -4,6 +4,9 @@ import { uploadCode, updateCode } from "../actions/codeActions";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
+/*import "../../lib/codemirror/lib/codemirror.css";
+import "../../lib/codemirror/mode/htmlmixed/htmlmixed";
+import CodeMirror from "react-codemirror";*/
 class CodeEditor extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +49,10 @@ class CodeEditor extends Component {
     });
   };
   saveProgram = () => {
-    this.props.uploadCode(this.state);
+    if (this.state.title !== "") this.props.uploadCode(this.state);
+    else if (this.state.title === "")
+      alert("Please provide a name for your code");
+    else if (this.state.code === "") alert("Please enter some code to save");
   };
   updateProgram = () => {
     this.props.updateCode(this.state);
@@ -98,6 +104,7 @@ class CodeEditor extends Component {
       <div className="w-100 h-max-full-64 of-hidden">
         <div className="w-100 w-max-full of-x-auto d-flex flex-row aic px-1 py-sm ">
           <p
+            style={{ fontWeight: "bold" }}
             className="h-100 p-sm text-primary c-pointer asb"
             onClick={this.runProgram}
           >
@@ -106,6 +113,7 @@ class CodeEditor extends Component {
           {auth.uid ? (
             <>
               <p
+                style={{ fontWeight: "bold" }}
                 className="h-100 p-sm text-primary c-pointer asb"
                 onClick={this.saveProgram}
               >
@@ -113,6 +121,7 @@ class CodeEditor extends Component {
               </p>
               {auth.uid === this.state.createdBy ? (
                 <p
+                  style={{ fontWeight: "bold" }}
                   className="h-100 c-pointer p-sm text-primary asb"
                   onClick={this.updateProgram}
                 >
@@ -122,6 +131,7 @@ class CodeEditor extends Component {
               <input
                 type="text"
                 id="title"
+                required
                 className="file-name-input ml-1"
                 value={`${this.state.title}`}
                 onChange={this.handleChange}
@@ -132,7 +142,7 @@ class CodeEditor extends Component {
               className="text-deco-none c-pointer p-sm text-primary asb"
               to="/"
             >
-              <p>Login to save</p>
+              <p style={{ fontWeight: "bold" }}>Login to save</p>
             </Link>
           )}
           <i
@@ -140,7 +150,7 @@ class CodeEditor extends Component {
               this.setState({ orientation: !this.state.orientation })
             }
             className="fa fa-refresh c-pointer text-primary ml-1"
-            style={{ fontSize: 16, padding: "0.5rem" }}
+            style={{ fontSize: 16, padding: "0.5rem", fontWeight: "bold" }}
           />
         </div>
         {/*<div className={`w-100 h-100 d-flex ${this.state.flexDir} p-sm`}>

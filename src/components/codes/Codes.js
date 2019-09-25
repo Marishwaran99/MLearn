@@ -13,15 +13,23 @@ class Codes extends Component {
 
   render() {
     const { auth, codes } = this.props;
+    var sortedCodes = codes ? codes.slice() : null;
+    sortedCodes = sortedCodes
+      ? sortedCodes.sort((a, b) =>
+          a.createdAt.toDate().getTime() < b.createdAt.toDate().getTime()
+            ? 1
+            : -1
+        )
+      : null;
     if (auth.uid) {
       return (
         <div className="container">
           <div className="d-flex flex-col w-100">
-            {codes ? (
-              codes.map((code, i) => {
+            <h2 className="my-1">Codes</h2>
+            {sortedCodes ? (
+              sortedCodes.map((code, i) => {
                 return (
                   <div>
-                    <h2 className="my-1">Codes</h2>
                     <Link
                       className="text-deco-none text-black"
                       key={i}

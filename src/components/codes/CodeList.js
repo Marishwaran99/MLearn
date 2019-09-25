@@ -8,11 +8,19 @@ import Loading from "../Loading";
 class CodeList extends Component {
   render() {
     const { codes } = this.props;
+    var sortedCodes = codes ? codes.slice() : null;
+    sortedCodes = sortedCodes
+      ? sortedCodes.sort((a, b) =>
+          a.createdAt.toDate().getTime() < b.createdAt.toDate().getTime()
+            ? 1
+            : -1
+        )
+      : null;
     return (
       <div>
-        {codes ? (
-          codes.length > 0 ? (
-            codes.map((code, i) => {
+        {sortedCodes ? (
+          sortedCodes.length > 0 ? (
+            sortedCodes.map((code, i) => {
               return (
                 <Link
                   key={code.id}
