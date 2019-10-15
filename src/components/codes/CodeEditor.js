@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { uploadCode, updateCode } from "../actions/codeActions";
 import { connect } from "react-redux";
-import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
-/*import "../../lib/codemirror/lib/codemirror.css";
-import "../../lib/codemirror/mode/htmlmixed/htmlmixed";
-import CodeMirror from "react-codemirror";*/
+import { Link } from "react-router-dom";
+import { compose } from "redux";
+import { updateCode, uploadCode } from "../actions/codeActions";
 class CodeEditor extends Component {
   constructor(props) {
     super(props);
@@ -153,39 +150,6 @@ class CodeEditor extends Component {
             style={{ fontSize: 16, padding: "0.5rem", fontWeight: "bold" }}
           />
         </div>
-        {/*<div className={`w-100 h-100 d-flex ${this.state.flexDir} p-sm`}>
-          <div className=" ml-1 mr-sm brad-2 bb-0 shadow-sm code-container">
-            <textarea
-              value={this.state.code}
-              onKeyDown={e => {
-                if (e.key === "Tab") {
-                  e.preventDefault();
-                  var { code } = this.state;
-                  code += "  ";
-                  this.setState({
-                    code: code
-                  });
-                  console.log(this.state.code);
-                }
-              }}
-              style={{
-                background: "bottom"
-              }}
-              className="w-half w-max-half h-100 h-max-100 h-min-100 w-min-half p-1 b-none"
-              onChange={e => this.setState({ code: e.target.value })}
-            />
-          </div>
-          <div className="w-half h-min-100 mr-1 ml-sm shadow-sm">
-            <iframe
-              width="100%"
-              height="100%"
-              className="output"
-              title="Output"
-              ref="output"
-              style={{ border: "none" }}
-            />
-          </div>
-        </div>*/}
         {this.state.orientation ? (
           <div
             style={{

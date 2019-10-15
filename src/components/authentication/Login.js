@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { login } from "../actions/authAction";
 import { firebaseConnect } from "react-redux-firebase";
 import { Link, Redirect } from "react-router-dom";
 import { compose } from "redux";
 import "../../css/style.css";
+import { login } from "../actions/authAction";
 class Login extends Component {
   state = {
     email: "",

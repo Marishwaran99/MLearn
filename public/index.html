@@ -19,7 +19,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link rel="stylesheet" href="../src/lib/codemirror/lib/codemirror.css" />
     <title>MLearn App</title>
   </head>
   <body>
@@ -35,18 +34,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script type="text/javascript" src="../src/lib/js/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="../src/lib/codemirror/lib/codemirror.js"
-    ></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var code = $(".codemirror-textarea")[0];
-        var editor = CodeMirrror.fromTextArea(code, {
-          lineNumbers: true
-        });
-      });
-    </script>
   </body>
 </html>

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import updateImg from "../../images/update.svg";
 import { connect } from "react-redux";
 import { firebaseConnect } from "react-redux-firebase";
 import { compose } from "redux";
+import { resetPassword, updateProfile } from "../actions/authAction";
 
-import { updateProfile, resetPassword } from "../actions/authAction";
 class EditProfile extends Component {
   state = {
     username: "",

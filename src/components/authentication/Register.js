@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { register } from "../actions/authAction";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
-import registerImg from "../../images/register.svg";
-import { compose } from "redux";
 import { firebaseConnect } from "react-redux-firebase";
+import { Link, Redirect } from "react-router-dom";
+import { compose } from "redux";
+import { register } from "../actions/authAction";
 class Register extends Component {
   state = {
     username: "",

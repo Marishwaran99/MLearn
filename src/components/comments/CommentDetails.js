@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import { compose } from "redux";
-import { firestoreConnect } from "react-redux-firebase";
-import { connect } from "react-redux";
-import commentImg from "../../images/comment.svg";
-import { addReply } from "../actions/commentAction";
-import { Link } from "react-router-dom";
-import Reply from "./Reply";
 import moment from "moment";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { firestoreConnect } from "react-redux-firebase";
+import { Link } from "react-router-dom";
+import { compose } from "redux";
+import { addReply } from "../actions/commentAction";
 import Loading from "../Loading";
+import Reply from "./Reply";
 class CommentDetails extends Component {
   state = {
     id: "",

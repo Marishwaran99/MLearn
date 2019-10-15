@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../App.css";
 const Loading = () => {
   return (
     <div className="container h-min-full-64 d-flex jcc aic">

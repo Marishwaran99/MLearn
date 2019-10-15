@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { compose } from "redux";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { Link } from "react-router-dom";
+import { compose } from "redux";
 import Code from "../codes/Code";
 import Loading from "../Loading";
 class CodeList extends Component {

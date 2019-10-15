@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { compose } from "redux";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
-import Comment from "./Comment";
 import { Link } from "react-router-dom";
-import discussion from "../../images/discussion.svg";
+import { compose } from "redux";
 import Loading from "../Loading";
+import Comment from "./Comment";
 class Comments extends Component {
   state = {
     filter: "createdAt"

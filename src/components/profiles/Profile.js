@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import profileImg from "../../images/profile.svg";
 import { connect } from "react-redux";
-import { logout } from "../actions/authAction";
-import { Link, Redirect } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
+import { Link, Redirect } from "react-router-dom";
 import { compose } from "redux";
+import { logout } from "../actions/authAction";
 import CodeList from "../codes/CodeList";
 class Profile extends Component {
   componentDidMount() {

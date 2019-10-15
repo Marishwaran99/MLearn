@@ -99,41 +99,7 @@ $childs: 3;
     transform: rotate(0deg);
   }
 }
-.circle-loader {
-  width: 132px;
-  height: 36px;
-  display: flex;
-  justify-content: space-between;
-  @for $i from 1 through 4 {
-    span {
-      width: 25px;
-      margin: 4px;
-      height: 25px;
-      border-radius: 50%;
-      background: $primary-color;
 
-      &:nth-child(#{$i}) {
-        animation-name: circleLoader;
-        animation-duration: $i + s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-delay: ($i) + s;
-      }
-    }
-  }
-}
-
-@keyframes circleLoader {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: translate(1);
-  }
-}
 @each $name, $val in $colors {
   .btn {
     &.#{$name} {

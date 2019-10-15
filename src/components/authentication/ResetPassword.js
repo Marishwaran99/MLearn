@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { resetPassword } from "../actions/authAction";
-import { Link } from "react-router-dom";
-import forgotpassword from "../../images/forgotpassword.svg";
-
 import { connect } from "react-redux";
-import { compose } from "redux";
 import { firebaseConnect } from "react-redux-firebase";
+import { Link } from "react-router-dom";
+import { compose } from "redux";
+import { resetPassword } from "../actions/authAction";
+
 class ForgotPassword extends Component {
   state = {
     email: ""

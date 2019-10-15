@@ -1,26 +1,25 @@
 import React, { Component } from "react";
-import Login from "./components/authentication/Login";
-import "./font-awesome.min.css";
-import "./App.css";
 import { connect } from "react-redux";
+import { BrowserRouter, Route } from "react-router-dom";
+import "./App.css";
+import { navToggle } from "./components/actions/navActions";
+import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetPassword from "./components/authentication/ResetPassword";
-import { BrowserRouter, Route } from "react-router-dom";
-import AddComment from "./components/comments/AddComment";
-import Profile from "./components/profiles/Profile";
-import EditProfile from "./components/profiles/EditProfile";
-import Comments from "./components/comments/Comments";
-import CommentDetails from "./components/comments/CommentDetails";
-import Home from "./components/dashboard/Home";
-import OtherProfile from "./components/profiles/OtherProfile";
-import Navbar from "./components/Navbar";
-import { navToggle } from "./components/actions/navActions";
 import CodeEditor from "./components/codes/CodeEditor";
 import Codes from "./components/codes/Codes";
-import Courses from "./components/courses/Courses";
+import AddComment from "./components/comments/AddComment";
+import CommentDetails from "./components/comments/CommentDetails";
+import Comments from "./components/comments/Comments";
 import CourseContent from "./components/courses/CourseContent";
 import CourseContentDetail from "./components/courses/CourseContentDetail";
+import Courses from "./components/courses/Courses";
+import Navbar from "./components/Navbar";
+import EditProfile from "./components/profiles/EditProfile";
+import OtherProfile from "./components/profiles/OtherProfile";
+import Profile from "./components/profiles/Profile";
 import "./css/style.css";
+import "./font-awesome.min.css";
 
 class App extends Component {
   toggleNav = () => {
@@ -45,7 +44,6 @@ class App extends Component {
           <Route exact path="/profile/:id" component={Profile} />
           <Route exact path="/profileo/:id" component={OtherProfile} />
           <Route exact path="/edit" component={EditProfile} />
-          <Route exact path="/home" component={Home} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/forgot-password" component={ResetPassword} />
           <Route exact path="/add-comment" component={AddComment} />

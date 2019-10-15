@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import data from "../../coursedata/courseData";
-import data1 from "../../coursedata/conceptCourse";
 import { Link } from "react-router-dom";
+import data1 from "../../coursedata/conceptCourse";
+import data from "../../coursedata/courseData";
 class CourseContent extends Component {
   state = {
     content: undefined,

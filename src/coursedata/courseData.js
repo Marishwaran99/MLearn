@@ -946,8 +946,8 @@ document.write() is used for displaying output
 <body>
   <div class="main-container">
     <div class="text-container">
-      <h4>Dr.APJ Abdul Kalam</h4>
-      <p>The Missile man of India</p>
+      <h4>TITLE</h4>
+      <p>Slogan or a short description...</p>
     </div>
     <div class="img-container">
     </div>
@@ -984,7 +984,7 @@ Place <h4> tag which has a text to whom you want to tribute and <p> tag to descr
         margin: 16px auto;
         height: 70%;
         max-width: 90%;
-        background-image: url("https://raw.githubusercontent.com/Mariii123/CSS/master/apjkalam.jpg");
+        background-image: url("https://raw.githubusercontent.com/Mariii123/bootstrap-4-projects/design1/header-bg.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

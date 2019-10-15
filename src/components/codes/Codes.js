@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { compose } from "redux";
-import { firestoreConnect } from "react-redux-firebase";
 import { connect } from "react-redux";
-import codeImg from "../../images/code.svg";
-import Code from "./Code";
+import { firestoreConnect } from "react-redux-firebase";
 import { Link, Redirect } from "react-router-dom";
+import { compose } from "redux";
 import Loading from "../Loading";
+import Code from "./Code";
 class Codes extends Component {
   componentDidMount = () => {
     document.title = "Codes | MLearn";

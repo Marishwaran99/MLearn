@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import courseImg from "../../images/courses.svg";
 import "../../css/style.css";
 class Courses extends Component {
   state = {

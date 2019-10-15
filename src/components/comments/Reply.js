@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { compose } from "redux";
-import { firestoreConnect } from "react-redux-firebase";
 import moment from "moment";
+import React, { Component } from "react";
 import { connect } from "react-redux";
+import { firestoreConnect } from "react-redux-firebase";
 import { Link } from "react-router-dom";
+import { compose } from "redux";
 class Reply extends Component {
   state = {
     name: ""

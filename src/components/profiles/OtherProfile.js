@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import profileImg from "../../images/profile.svg";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";

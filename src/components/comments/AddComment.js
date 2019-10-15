@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { addComment } from "../actions/commentAction";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
-import addCommentImg from "../../images/addComment.svg";
+import { Redirect } from "react-router-dom";
+import { addComment } from "../actions/commentAction";
 import "./styles.css";
 class AddComment extends Component {
   state = {

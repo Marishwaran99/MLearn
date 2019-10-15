@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import data from "../../coursedata/courseData";
-import data1 from "../../coursedata/conceptCourse";
-import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
+import data1 from "../../coursedata/conceptCourse";
+import data from "../../coursedata/courseData";
 
 class CourseContentDetail extends Component {
   state = {

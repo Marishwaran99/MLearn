@@ -1,9 +1,9 @@
-import React, { Component } from "react";
 import moment from "moment";
-import { firestoreConnect } from "react-redux-firebase";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { compose } from "redux";
+import { firestoreConnect } from "react-redux-firebase";
 import { Link } from "react-router-dom";
+import { compose } from "redux";
 class Comment extends Component {
   state = {
     name: ""
