@@ -20,11 +20,6 @@ class OtherProfile extends Component {
               <p className="mb-sm">{profile.email}</p>
             </div>
             <hr />
-            <div className="my-courses-container my-1">
-              <h4 className="mb-sm">Courses</h4>
-              <p className="mb-sm">List of courses</p>
-            </div>
-            <hr />
             <div className="my-codes-container my-sn">
               <h4>Codes</h4>
               <div className="mt-1">
